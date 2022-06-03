@@ -7,6 +7,9 @@ using System.Windows;
 
 namespace sort_search_algorithm.decision
 {
+    /// <summary>
+    /// 判定法
+    /// </summary>
     public static class Decision
     {
         /// <summary>
@@ -73,10 +76,10 @@ namespace sort_search_algorithm.decision
         }
         
         /// <summary>
-        /// 
+        /// 素数を列挙した真偽値を求める
         /// </summary>
-        /// <param name="x"></param>
-        /// <returns></returns>
+        /// <param name="x">素数を求めたい母集団の数値</param>
+        /// <returns>素数を列挙した真偽値</returns>
         public static bool[] EratosthenesArray(int x)
         {
             var isPrime = new bool[x+1];
@@ -98,7 +101,6 @@ namespace sort_search_algorithm.decision
                     isPrime[j] = false;
                 }
             }
-            
             return isPrime;
         }
         
