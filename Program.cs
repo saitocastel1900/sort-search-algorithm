@@ -1,4 +1,6 @@
 ﻿using System;
+using sort_search_algorithm.decision;
+using sort_search_algorithm.other;
 
 namespace sort_search_algorithm
 {
@@ -6,7 +8,10 @@ namespace sort_search_algorithm
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+           Decision.EratosthenesArray(2).DebugLog();
+           
+           
+           //Console.WriteLine("Hello World!");
         }
     }
 }
