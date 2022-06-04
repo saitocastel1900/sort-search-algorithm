@@ -38,3 +38,4 @@ C#で実装した代表的なアルゴリズムです。ご自由にお使いく
 蟻本：https://book.mynavi.jp/ec/products/detail/id=22672  
 素数判定：https://qiita.com/asksaito/items/76b71602dd956b79dbf7  
 AES:https://developers.wonderpla.net/entry/2016/08/02/141000  
+数学的思考https://atcoder.jp/contests/math-and-algorithm  
