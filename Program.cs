@@ -2,6 +2,7 @@
 using sort_search_algorithm.decision;
 using sort_search_algorithm.other;
 using sort_search_algorithm.search;
+using sort_search_algorithm.sort;
 
 namespace sort_search_algorithm
 {
@@ -9,8 +10,9 @@ namespace sort_search_algorithm
     {
         static void Main(string[] args)
         {
-            var s = new int[] { 1,2,3,4,5,6,7,8,9,10};
-            Serch.BinarySearch(s,5,0,s.Length).DebugLog();
+            var s = new int[] {10, 2, 9, 1, 4, 5};
+            
+            Sort.Sellection(s).DebugLog();
 
             //Console.WriteLine("Hello World!");
         }

@@ -31,12 +31,29 @@ namespace sort_search_algorithm.other
                 }
             }
         }
-        
         public static void DebugLog(this int x)
         {
             Console.Write(x);
         }
-        
+        public static void DebugLog(this int[] x)
+        {
+            foreach (var _x in x)
+            {
+                Console.WriteLine(_x);
+            }
+        }
+
+        /// <summary>
+        /// 互いの値を入れ替える
+        /// </summary>
+        /// <param name="a">入れ替えたい値</param>
+        /// <param name="b">入れ替えたい値</param>
+        public static void Swap(ref int a, ref int b)
+        {
+            int tmp = a;
+            a = b;
+            b = tmp;
+        }
         
     }
 }
