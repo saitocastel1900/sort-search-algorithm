@@ -32,6 +32,11 @@ namespace sort_search_algorithm.other
             }
         }
         
+        public static void DebugLog(this int x)
+        {
+            Console.Write(x);
+        }
+        
         
     }
 }
