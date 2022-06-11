@@ -56,4 +56,20 @@ namespace sort_search_algorithm.other
         }
         
     }
+    /// <summary>
+    /// 複素数
+    /// </summary>
+    public class Complex
+    {
+        private float re;
+        private float im;
+        static Complex Mul(Complex z0,Complex z1)
+        {
+            return new Complex()
+            {
+
+            };
+
+        }
+    }
 }

@@ -48,5 +48,22 @@ namespace sort_search_algorithm.sort
 
             return array;
         }
+
+
+        /// <summary>
+        ////挿入ソート
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns></returns>
+        public static int[] InsertionSort(int[] array)
+        {
+            return array;
+        }
+
+        public static int[] HeapSort(int[] array)
+        {
+            return array;
+        }
+
     }
 }
