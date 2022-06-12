@@ -63,13 +63,20 @@ namespace sort_search_algorithm.other
     {
         private float re;
         private float im;
-        static Complex Mul(Complex z0,Complex z1)
+     public static Complex operator+ (Complex z0,Complex z1)
         {
             return new Complex()
             {
 
             };
-
         }
+     
+     public static Complex operator- (Complex z0,Complex z1)
+     {
+         return new Complex()
+         {
+
+         };
+     }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System.Runtime.InteropServices;
+using System.Threading;
 using sort_search_algorithm.other;
 
 namespace sort_search_algorithm.sort
@@ -55,8 +56,22 @@ namespace sort_search_algorithm.sort
         /// </summary>
         /// <param name="array"></param>
         /// <returns></returns>
-        public static int[] InsertionSort(int[] array)
+        public static int[] Insertion(int[] array)
         {
+            // [0]<[i] ...
+            for (int i = 1; i < array.Length; i++)
+            {
+                var a = array[i];
+                var k = i;
+                
+                //後ろの値と比較して値が大きければ...(array[0]とは最初だけしか比較しない)
+                while (k >= 1 && a < array[k - 1])
+                {
+                    Other.Swap(ref array[k],ref array[k - 1]);
+                    k--;
+                }
+            }
+
             return array;
         }
 

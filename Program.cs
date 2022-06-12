@@ -11,8 +11,9 @@ namespace sort_search_algorithm
         static void Main(string[] args)
         {
             var s = new int[] {10, 2, 9, 1, 4, 5};
+            //var n = new other.Complex();
             
-            Sort.Sellection(s).DebugLog();
+            Sort.Insertion(s).DebugLog();
 
             //Console.WriteLine("Hello World!");
         }
