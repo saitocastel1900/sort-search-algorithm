@@ -86,19 +86,19 @@ namespace sort_search_algorithm.sort
             {
                 //ヒープに代入
                 for (int i = 1; i < array.Length; i++) Push(array, i);
-                
+
                 //ヒープから持ってくる
                 for (int i = array.Length - 1; i >= 0; i--) array[i] = Pop(array, i);
 
                 return array;
             }
 
-           /// <summary>
-           /// コレクションをヒープに入れる(ヒープを作る)
-           /// </summary>
-           /// <param name="array"></param>
-           /// <param name="n"></param>
-            private static void Push(int[] array,int n)
+            /// <summary>
+            /// コレクションをヒープに入れる(ヒープを作る)
+            /// </summary>
+            /// <param name="array"></param>
+            /// <param name="n"></param>
+            private static void Push(int[] array, int n)
             {
                 while (n != 0)
                 {
@@ -116,7 +116,7 @@ namespace sort_search_algorithm.sort
             /// <param name="array"></param>
             /// <param name="n"></param>
             /// <returns></returns>
-            private static int Pop(int[] array,int n)
+            private static int Pop(int[] array, int n)
             {
                 int max = array[0];
                 array[0] = array[n];
@@ -127,9 +127,9 @@ namespace sort_search_algorithm.sort
                     if (array[i].CompareTo(array[j]) < 0) Other.Swap(ref array[i], ref array[j]);
                     i = j;
                 }
+
                 return max;
             }
         }
-        
     }
 }
