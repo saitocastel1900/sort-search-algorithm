@@ -1,11 +1,13 @@
 ﻿using System.Runtime.InteropServices;
 using System.Threading;
+using System;
 using sort_search_algorithm.other;
 
 namespace sort_search_algorithm.sort
 
 {
     public static class Sort
+
     {
         /// <summary>
         /// 選択ソート
@@ -52,7 +54,7 @@ namespace sort_search_algorithm.sort
 
 
         /// <summary>
-        ////挿入ソート
+        /// 挿入ソート
         /// </summary>
         /// <param name="array"></param>
         /// <returns></returns>
@@ -63,11 +65,11 @@ namespace sort_search_algorithm.sort
             {
                 var a = array[i];
                 var k = i;
-                
+
                 //後ろの値と比較して値が大きければ...(array[0]とは最初だけしか比較しない)
                 while (k >= 1 && a < array[k - 1])
                 {
-                    Other.Swap(ref array[k],ref array[k - 1]);
+                    Other.Swap(ref array[k], ref array[k - 1]);
                     k--;
                 }
             }
@@ -75,10 +77,40 @@ namespace sort_search_algorithm.sort
             return array;
         }
 
-        public static int[] HeapSort(int[] array)
+        public static class Heap
         {
-            return array;
-        }
+            public static int[] Sort(int[] array)
+            {
+                for (int i = 1; i < array.Length; i++)
+                {
+                    Push(array, i);
+                }
+                Console.WriteLine(string.Join(",", array));
 
+                for (int i = array.Length - 1; i >= 0; i--)
+                {
+                    array[i] = Pop(array, i);
+                }
+                Console.WriteLine(string.Join(",", array));
+                
+                return array;
+            }
+
+            /// <summary>
+            /// コレクションをヒープに入れる(ヒープを作る)
+            /// </summary>
+            private static void Push(int[] array,int n)
+            {
+            }
+
+            /// <summary>
+            /// ヒープから最大値を順にコレクションへ出す
+            /// </summary>
+            private static int Pop(int[] array,int n)
+            {
+
+                return array[n];
+            }
+        }
     }
 }
