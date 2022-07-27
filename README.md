@@ -57,7 +57,7 @@ C#で実装した代表的なアルゴリズムです。ご自由にお使いく
 
 ## 暗号化
 **・AES**  
--Byteを使って変換したものをXORでキー文字列と組み合わせることで暗号化   
+-   
 -性質としてXORを二回通すと元の値が得られる  
 -共通暗号方式の基礎として使われている  
 **・XOR**  
@@ -111,4 +111,5 @@ C#で実装した代表的なアルゴリズムです。ご自由にお使いく
 蟻本：https://book.mynavi.jp/ec/products/detail/id=22672  
 素数判定：https://qiita.com/asksaito/items/76b71602dd956b79dbf7  
 AES:https://developers.wonderpla.net/entry/2016/08/02/141000  
+https://www.hanachiru-blog.com/entry/2020/06/22/201905  
 数学的思考https://atcoder.jp/contests/math-and-algorithm  
