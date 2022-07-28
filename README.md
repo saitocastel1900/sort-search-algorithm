@@ -56,10 +56,14 @@ C#で実装した代表的なアルゴリズムです。ご自由にお使いく
 **・ボコソート**  
 
 ## 暗号化
-**・AES**  
--Byteを使って変換したものをXORでキー文字列と組み合わせることで暗号化   
--性質としてXORを二回通すと元の値が得られる  
+**・AES(CBC)**  
+-DESの代わりに使われている暗号化アルゴリズム  
 -共通暗号方式の基礎として使われている  
+1.RijndaelManagedにAES暗号は定義されているので、RijndaelManagedを生成して色々設定する  
+2.鍵の長さを選択する必要がある(ブロック鍵は128で固定)  
+3.暗号化モードにもCBC（今回はこっち）とECBがある  
+4.初期化ベクトル(Key,IV)を反映させた上で暗号化  
+
 **・XOR**  
 -Byteを使って変換したものをXORでキー文字列と組み合わせることで暗号化   
 -性質としてXORを二回通すと元の値が得られる  
@@ -111,4 +115,5 @@ C#で実装した代表的なアルゴリズムです。ご自由にお使いく
 蟻本：https://book.mynavi.jp/ec/products/detail/id=22672  
 素数判定：https://qiita.com/asksaito/items/76b71602dd956b79dbf7  
 AES:https://developers.wonderpla.net/entry/2016/08/02/141000  
+https://www.hanachiru-blog.com/entry/2020/06/22/201905  
 数学的思考https://atcoder.jp/contests/math-and-algorithm  
