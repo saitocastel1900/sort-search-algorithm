@@ -14,54 +14,36 @@ namespace sort_search_algorithm
     {
         static void Main(string[] args)
         {
+            #region XOR
+
+            var test1 = new Encryption.Data("hello","22562226");
+            
+            var _data = Encryption.Xor(test1.value,test1.key);
+            
+            Console.WriteLine(Encryption.Byte.Decode(_data));
+            
+            _data = Encryption.Xor(_data,test1.key);
+            Console.WriteLine(Encryption.Byte.Decode(_data));
+            
+            #endregion
+
+            #region AES
             /*
-            var s = new int[] {10, 2, 9, 1, 4, 5};
-            //var n = new other.Complex();
-            
-            Sort.Heap.Sort(s).DebugLog();
-            
-
-            var test = "aaaasawdwasdwadwadasds";
-            var key = "22562226";
-
-            var data = Encryption.Byte.Encode(test);
-            var bytekey = Encryption.Byte.Encode(key);
-            data = Encryption.Xor(data,bytekey);
-            
-            foreach (var VARIABLE in data)
-            {
-                Console.WriteLine(VARIABLE);
-            }
-            
-            data = Encryption.Xor(data,bytekey);
-            Console.Write(Encryption.Byte.Decode(data));
+            var Data = new Encryption.Data("Hello World!","1011010111","hogehogehoge");
+                        //暗号文
+                        var encrypted = Encryption.Aes.Encryption(Data.data,192,128,Data.salt,Data.pw);
+                        //64種類の英数字で表現
+                        Console.WriteLine(System.Convert.ToBase64String(encrypted));
+                        Console.WriteLine(encryption.Encryption.Byte.Decode(encrypted));
+                        
+                        var dencrypted = Encryption.Aes.Decrypt(Data.data,192,128,Data.salt,Data.pw,encrypted);
+                        //平文
+                        Console.WriteLine(System.Convert.ToBase64String(dencrypted));
+                        Console.WriteLine(encryption.Encryption.Byte.Decode(dencrypted));
             */
-            var data = "uyrdyjctdrjc";
-            var src = System.Text.Encoding.UTF8.GetBytes(data);
+            #endregion
             
-            RijndaelManaged rijndaelManaged = new RijndaelManaged();
-            rijndaelManaged.KeySize = 128;
-            rijndaelManaged.BlockSize = 128;
             
-            string pw = "saito1011";
-            string sait = "sait";
-
-            byte[] bsait = Encoding.UTF8.GetBytes(sait);
-            Rfc2898DeriveBytes rfc2898DeriveBytes = new Rfc2898DeriveBytes(pw, bsait);
-            rfc2898DeriveBytes.IterationCount = 1000;
-
-            rijndaelManaged.Key = rfc2898DeriveBytes.GetBytes(rijndaelManaged.KeySize / 8);
-            rijndaelManaged.IV = rfc2898DeriveBytes.GetBytes(rijndaelManaged.BlockSize / 8);
-
-            ICryptoTransform enCryptoTransform = rijndaelManaged.CreateEncryptor();
-            byte[] encrBytes = enCryptoTransform.TransformFinalBlock(src,0,src.Length);
-            foreach (var VARIABLE in encrBytes)
-            {
-                Console.Write(VARIABLE);
-            }
-            
-
-            //Console.WriteLine("Hello World!");
         }
     }
 }
